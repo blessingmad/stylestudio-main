@@ -1,0 +1,2128 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff; /* Light blue background */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 128, 0.2); /* Blue shadow */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Quick transition */
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b03060; /* Medium maroon */
+    padding: 20px;
+}
+
+.carousel-item img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.carousel-content {
+    width: 55%;
+    color: #f0f8ff; /* Alice blue */
+}
+
+.carousel-content h2 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    color: #000080; /* Navy blue */
+}
+
+.carousel-content p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #4682b4; /* Steel blue */
+}
+
+.carousel-content .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000080; /* Navy blue */
+}
+
+.carousel-content .discount {
+    text-decoration: line-through;
+    color: #87ceeb; /* Sky blue */
+    margin-right: 10px;
+}
+
+.carousel-content button {
+    background-color: #4682b4; /* Steel blue */
+    color: #f0f8ff; /* Alice blue */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-content button:hover {
+    background-color: #5f9ea0; /* Cadet blue */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 128, 0.5); /* Semi-transparent navy blue */
+    color: #f0f8ff; /* Alice blue */
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 128, 0.8); /* Slightly darker navy blue */
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex-direction: column; /* Stack the content and image */
+        text-align: center;
+    }
+
+    .carousel-item img {
+        width: 80%; /* Adjust image size on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .carousel-content {
+        width: 100%;
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #000080; /* Navy blue */
+}
+
+.featured-hairstyles {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hairstyle-card {
+    background: linear-gradient(to bottom right, #4682b4, #5f9ea0); /* Steel blue gradient */
+    color: #f0f8ff; /* Alice blue */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 128, 0.2);
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hairstyle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 128, 0.3);
+}
+
+.hairstyle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the square container */
+    aspect-ratio: 1 / 1; /* Maintains square aspect ratio */
+}
+
+.hairstyle-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.hairstyle-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #f0f8ff; /* Alice blue */
+}
+
+.hairstyle-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #87cefa; /* Light sky blue */
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #000080; /* Navy blue */
+    color: #f0f8ff; /* Alice blue */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #000080; /* Navy blue border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #b03060; /* Medium maroon */
+    color: #f0f8ff; /* Alice blue */
+}
+
+.see-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more-button {
+    background-color: #4682b4; /* Steel blue */
+    color: #f0f8ff; /* Alice blue */
+    font-weight: bold;
+    padding: 12px 25px;
+    border: 2px solid #4682b4; /* Steel blue border */
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.see-more-button:hover {
+    background-color: #b03060; /* Medium maroon */
+    color: #f0f8ff; /* Alice blue */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hairstyle-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hairstyle-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .hairstyle-image {
+        height: auto; /* Allow height to adjust on small screens */
+    }
+}
+
+
+
+
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd; /* Light blue background */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #003366; /* Dark blue */
+}
+
+/* Section Containers */
+.featured-hairstyles,
+.featured-nails {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card Styling */
+.hairstyle-card,
+.nail-card {
+    background: linear-gradient(to bottom right, #003366, #800000); /* Dark blue to medium maroon gradient */
+    color: #f0f8ff; /* Alice blue text */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hairstyle-card:hover,
+.nail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.hairstyle-image,
+.nail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+/* Content Styling */
+.hairstyle-content,
+.nail-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.hairstyle-name,
+.nail-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #f0f8ff; /* Alice blue */
+}
+
+.hairstyle-price,
+.nail-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #b0c4de; /* Light steel blue */
+}
+
+/* Button Styling */
+.book-now-button {
+    display: inline-block;
+    background-color: #800000; /* Medium maroon */
+    color: #f0f8ff; /* Alice blue */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #800000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.book-now-button:hover {
+    background-color: #003366; /* Dark blue */
+    color: #f0f8ff; /* Alice blue */
+    transform: scale(1.05);
+}
+
+/* See More Button Styling */
+.see-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more-button {
+    background-color: #003366; /* Dark blue */
+    color: #f0f8ff; /* Alice blue */
+    font-weight: bold;
+    padding: 12px 25px;
+    border: 2px solid #003366;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.see-more-button:hover {
+    background-color: #800000; /* Medium maroon */
+    color: #f0f8ff; /* Alice blue */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hairstyle-card,
+    .nail-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hairstyle-card,
+    .nail-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .hairstyle-name,
+    .nail-name {
+        font-size: 1.2rem;
+    }
+
+    .hairstyle-price,
+    .nail-price {
+        font-size: 1rem;
+    }
+
+    .hairstyle-image,
+    .nail-image {
+        height: auto;
+    }
+}
+
+
+
+
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background for contrast */
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #00008B; /* Black */
+}
+
+/* Featured Spa Section */
+.featured-spa {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.spa-card {
+    background: linear-gradient(to bottom right, #003366, #800000); /* Dark blue to medium maroon gradient */
+    color: #f0f8ff; /* Alice blue text */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spa-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.spa-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+}
+
+.spa-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.spa-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #f0f8ff; /* Alice blue */
+}
+
+.spa-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #b0c4de; /* Light steel blue */
+}
+
+/* Buttons */
+.book-now-button,
+.see-more-button {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.book-now-button {
+    background-color: #800000; /* Medium maroon */
+    color: #f0f8ff; /* Alice blue */
+    padding: 10px 20px;
+    border: 2px solid #800000;
+}
+
+.book-now-button:hover {
+    background-color: #003366; /* Dark blue */
+    color: #f0f8ff; /* Alice blue */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.see-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more-button {
+    background-color: #003366; /* Dark blue */
+    color: #f0f8ff; /* Alice blue */
+    padding: 12px 25px;
+    border: 2px solid #003366;
+}
+
+.see-more-button:hover {
+    background-color: #800000; /* Medium maroon */
+    color: #f0f8ff; /* Alice blue */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .spa-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .spa-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .spa-name {
+        font-size: 1.2rem;
+    }
+
+    .spa-price {
+        font-size: 1rem;
+    }
+
+    .spa-image {
+        height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #00008B; /* Black */
+}
+
+/* Featured Products Section */
+.featured-products {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark Blue to Maroon gradient */
+    color: #fff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the square container */
+    aspect-ratio: 1 / 1; /* Maintains square aspect ratio */
+}
+
+.product-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff; /* White */
+}
+
+.product-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ccc; /* Light gray */
+}
+
+/* Add to Cart Button */
+.add-to-cart-button {
+    display: inline-block;
+    background-color: #fff; /* White */
+    color: #00008B; /* Black */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #00008B; /* Black */
+    color: #fff; /* White */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* See More Button */
+.see-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more-button {
+    background-color: #00008B; /* Black */
+    color: #fff; /* White */
+    font-weight: bold;
+    padding: 12px 25px;
+    border: 2px solid #00008B;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.see-more-button:hover {
+    background-color: #fff; /* White */
+    color: #00008B; /* Black */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .product-name {
+        font-size: 1.2rem;
+    }
+
+    .product-price {
+        font-size: 1rem;
+    }
+
+    .product-image {
+        height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+
+/* Customer Testimonials Styling */
+.testimonials-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #e3eaf5; /* Light blue background */
+    border: 2px solid #8b0000; /* Medium maroon border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(139, 0, 0, 0.2); /* Medium maroon shadow */
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(139, 0, 0, 0.3); /* Enhanced medium maroon shadow */
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #8b0000; /* Medium maroon */
+}
+
+.testimonial-content {
+    padding: 15px;
+}
+
+.testimonial-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #2f4f7f; /* Dark blue */
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #4b4b81; /* Muted blue-gray */
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* Responsive Design for Testimonials */
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        width: 100%;
+    }
+}
+
+/* High-End Booking Form Styling */
+.booking-form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e3eaf5; /* Light blue background */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(47, 79, 127, 0.2); /* Dark blue shadow */
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: #2f4f7f; /* Dark blue */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-form label {
+    font-size: 1.1rem;
+    color: #8b0000; /* Medium maroon */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #4b4b81; /* Muted blue-gray */
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #2f4f7f; /* Dark blue */
+}
+
+.booking-form .submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #8b0000; /* Medium maroon */
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form .submit-button:hover:not([disabled]) {
+    background-color: #4b4b81; /* Muted blue-gray */
+}
+
+.booking-form textarea {
+    resize: vertical;
+    font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .booking-form-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+/* High-End Footer Styling */
+.footer {
+    background-color: #00008B; /* Dark blue background */
+    color: white; /* white text */
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo-image {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-salon-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: maroon; /* Dark blue */
+}
+
+.footer-links,
+.footer-contact,
+.footer-social-media {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    color: #8b0000; /* Medium maroon */
+    margin-bottom: 10px;
+}
+
+.footer-links ul,
+.footer-social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.footer-social-media li {
+    margin: 8px 0;
+}
+
+.footer-links a,
+.footer-social-media a {
+    color: white; /* white */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-social-media a:hover {
+    color: #8b0000; /* Medium maroon on hover */
+}
+
+.footer-social-media img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-media img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: white; /* white */
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-links,
+    .footer-contact,
+    .footer-social-media {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .footer-social-media {
+        margin-top: 20px;
+    }
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #8b0000; /* Medium maroon */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #2f4f7f; /* Dark blue */
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background-color: #e3eaf5; /* Light blue background */
+    color: #2f4f7f; /* Dark blue text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-header {
+    font-size: 2.5rem;
+    color: #2f4f7f; /* Dark blue */
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-info a {
+    color: #8b0000; /* Medium maroon links */
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #2f4f7f; /* Dark blue on hover */
+}
+
+.map-container {
+    position: relative;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 5px solid #2f4f7f; /* Dark blue border */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.map-container img:hover {
+    transform: scale(1.05);
+}
+
+.view-live-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #8b0000; /* Medium maroon */
+    color: #fff; /* White text */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #8b0000; /* Medium maroon border */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.view-live-button:hover {
+    background-color: #2f4f7f; /* Dark blue */
+    color: #fff; /* White text */
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+    .contact-header {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .contact-info {
+        font-size: 1rem; /* Smaller text on mobile */
+        margin-bottom: 20px; /* Adjust spacing */
+    }
+
+    .contact-info a {
+        font-size: 1rem; /* Adjust link size */
+    }
+
+    .map-container {
+        max-width: 100%; /* Ensure map container takes full width */
+        margin: 10px auto; /* Reduce margin for smaller screens */
+        border-width: 3px; /* Smaller border for mobile */
+    }
+
+    .view-live-button {
+        padding: 8px 15px; /* Smaller button padding for mobile */
+        font-size: 0.9rem; /* Smaller font size for button */
+        bottom: 8px; /* Adjust position for smaller screens */
+        right: 8px;
+    }
+}
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .contact-header {
+        font-size: 1.5rem; /* Further reduce header font size */
+    }
+
+    .contact-info {
+        font-size: 0.9rem; /* Even smaller text size */
+    }
+
+    .contact-info a {
+        font-size: 0.9rem; /* Even smaller links */
+    }
+
+    .view-live-button {
+        padding: 6px 12px; /* Even smaller button padding */
+        font-size: 0.8rem; /* Decrease font size further */
+    }
+}
+
+/* Featured Facial Cards */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #2f4f7f; /* Dark Blue */
+}
+
+.featured-facials {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.facial-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark Blue to Maroon gradient */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.facial-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.facial-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.facial-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.facial-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: white;
+    color: #2f4f7f; /* Dark Blue text */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #2f4f7f; /* Dark Blue border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8b0000; /* Maroon */
+    color: white;
+}
+
+/* Responsive Design for Featured Facial Cards */
+@media (max-width: 768px) {
+    .facial-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .facial-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .facial-image {
+        height: auto;
+    }
+}
+
+/* Gallery Section Styling */
+.gallery {
+    padding: 50px 20px;
+    background-color: #e3eaf5; /* Light blue background */
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    color: #2f4f7f; /* Dark blue for header */
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.hairstyle-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hairstyle-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark blue to maroon gradient */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: calc(33.33% - 20px);
+    flex: 1 1 calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hairstyle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hairstyle-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hairstyle-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.hairstyle-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.hairstyle-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: white;
+    color: #2f4f7f; /* Dark Blue */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #2f4f7f; /* Dark Blue border */
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8b0000; /* Maroon */
+    color: white;
+}
+
+/* Responsive Design for Gallery */
+@media (max-width: 1024px) {
+    .hairstyle-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hairstyle-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hairstyle-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .gallery h2 {
+        font-size: 1.8rem; /* Slightly smaller header on mobile */
+    }
+
+    .hairstyle-content h3 {
+        font-size: 1.2rem; /* Adjust heading size for mobile */
+    }
+
+    .hairstyle-content p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+
+    .book-now-button {
+        font-size: 0.9rem; /* Smaller button text for mobile */
+        padding: 8px 15px;
+    }
+}
+
+	
+	
+	
+/* Header */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #2f4f7f; /* Dark Blue */
+}
+
+/* Featured Manicure Cards */
+.featured-manicures {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.manicure-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark Blue to Maroon gradient */
+    color: #fff; /* White text */
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manicure-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.manicure-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-bottom: 5px solid #fff; /* White separation line */
+}
+
+.manicure-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.manicure-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff; /* White */
+}
+
+.manicure-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ddd; /* Light Gray */
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #fff; /* White button */
+    color: #2f4f7f; /* Dark Blue text */
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid #2f4f7f; /* Dark Blue border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8b0000; /* Maroon background */
+    color: white;
+}
+
+/* Responsive Design for Manicure Cards */
+@media (max-width: 768px) {
+    .manicure-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .manicure-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .manicure-image {
+        height: auto;
+    }
+
+    .manicure-content {
+        padding: 15px;
+    }
+
+    .book-now-button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+/* Featured Massage Cards */
+.featured-massages {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.massage-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark Blue to Maroon gradient */
+    color: #fff; /* White text */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.massage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.massage-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-bottom: 5px solid #fff; /* White border for separation */
+}
+
+.massage-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.massage-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff; /* White */
+}
+
+.massage-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ddd; /* Light Gray */
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #fff; /* White button */
+    color: #2f4f7f; /* Dark Blue text */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #2f4f7f; /* Dark Blue border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8b0000; /* Maroon background */
+    color: white;
+}
+
+/* Responsive Design for Massage Cards */
+@media (max-width: 768px) {
+    .massage-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .massage-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .massage-image {
+        height: auto;
+    }
+
+    .massage-content {
+        padding: 15px;
+    }
+
+    .book-now-button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+
+
+
+
+
+
+/* Header */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #2f4f7f; /* Dark Blue */
+}
+
+/* Featured Nail Art Cards */
+.featured-nail-arts {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nail-art-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark Blue to Maroon gradient */
+    color: #fff; /* White Text */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nail-art-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced Shadow on Hover */
+}
+
+.nail-art-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-bottom: 5px solid #fff; /* White Border Below Image */
+}
+
+.nail-art-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.nail-art-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff; /* White */
+}
+
+.nail-art-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ddd; /* Light Gray */
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #fff; /* White Button */
+    color: #2f4f7f; /* Dark Blue Text */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #2f4f7f; /* Dark Blue Border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8b0000; /* Maroon Background */
+    color: white;
+}
+
+/* Responsive Design for Nail Art Cards */
+@media (max-width: 768px) {
+    .nail-art-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .nail-art-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .nail-art-image {
+        height: auto;
+    }
+}
+
+/* Featured Pedicure Cards */
+.featured-pedicures {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pedicure-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark Blue to Maroon gradient */
+    color: #fff; /* White Text */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pedicure-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced Shadow on Hover */
+}
+
+.pedicure-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-bottom: 5px solid #fff; /* White Border Below Image */
+}
+
+.pedicure-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.pedicure-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff; /* White */
+}
+
+.pedicure-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ddd; /* Light Gray */
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #fff; /* White Button */
+    color: #2f4f7f; /* Dark Blue Text */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #2f4f7f; /* Dark Blue Border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8b0000; /* Maroon Background */
+    color: white;
+}
+
+/* Responsive Design for Pedicure Cards */
+@media (max-width: 768px) {
+    .pedicure-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .pedicure-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .pedicure-image {
+        height: auto;
+    }
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Light Gray Background */
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #2f4f7f; /* Dark Blue */
+}
+
+/* Featured Treatments */
+.featured-treatments {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.treatment-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark Blue to Maroon gradient */
+    color: #fff; /* White Text */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.treatment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced Shadow on Hover */
+}
+
+.treatment-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-bottom: 5px solid #fff; /* White Border Below Image */
+}
+
+.treatment-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.treatment-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff; /* White */
+}
+
+.treatment-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ddd; /* Light Gray */
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #fff; /* White Button */
+    color: #2f4f7f; /* Dark Blue Text */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #2f4f7f; /* Dark Blue Border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8b0000; /* Maroon Background */
+    color: white;
+}
+
+/* Responsive Design for Treatments */
+@media (max-width: 768px) {
+    .treatment-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .treatment-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .treatment-image {
+        height: auto;
+    }
+}
+
+/* Featured Body Scrubs */
+.featured-body-scrubs {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.body-scrub-card {
+    background: linear-gradient(to bottom right, #2f4f7f, #8b0000); /* Dark Blue to Maroon gradient */
+    color: #fff; /* White Text */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.body-scrub-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced Shadow on Hover */
+}
+
+.body-scrub-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-bottom: 5px solid #fff; /* White Border Below Image */
+}
+
+.body-scrub-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.body-scrub-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff; /* White */
+}
+
+.body-scrub-price {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ddd; /* Light Gray */
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #fff; /* White Button */
+    color: #2f4f7f; /* Dark Blue Text */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #2f4f7f; /* Dark Blue Border */
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-button:hover {
+    background-color: #8b0000; /* Maroon Background */
+    color: white;
+}
+
+/* Responsive Design for Body Scrubs */
+@media (max-width: 768px) {
+    .body-scrub-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .body-scrub-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .body-scrub-image {
+        height: auto;
+    }
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #00008B; /* Deep Blue */
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+.company-name {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Brush Script MT', cursive;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #8B0000; /* Deep Maroon */
+    margin-left: 10px; /* Add space between the logo and company name */
+}
+
+/* This section ensures the icon inside company name is styled properly */
+.company-name i {
+    font-size: 35px;
+    color: #FFD700; /* Gold for icon */
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1rem;
+    padding: 5px 15px;
+    background-color: #8B0000; /* Maroon background */
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #FFD700; /* Gold background on hover */
+    color: blue; /* Blue text on hover */
+    transform: scale(1.1);
+}
+
+nav ul li a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Dropdown Menu */
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8B0000; /* Maroon for dropdown */
+    padding: 10px 0;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li:hover .dropdown {
+    opacity: 1;
+}
+
+.dropdown a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    white-space: nowrap;
+    background-color: #8B0000; /* Maroon background */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+    background-color: #FFD700; /* Gold background on hover */
+    color: blue; /* Blue text on hover */
+}
+
+/* Second Ribbon */
+.nav-row {
+    height: 10px;
+    background-color: #FF8C00; /* Orange Ribbon */
+}
+
+/* Hamburger Menu */
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        background-color: #2c2c2c;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 200;
+    }
+
+    nav ul.open {
+        display: flex; /* Visible when toggled */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul li:hover .dropdown {
+        display: block;
+    }
+
+    .top-header {
+        padding: 10px 20px;
+        background: #00008B; /* Deep Blue */
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav-row {
+        height: 10px;
+        background-color: #FF8C00;
+        margin-top: 50px; /* Adjust for header height */
+    }
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center; /* Align items horizontally */
+    gap: 10px; /* Space between the logo and company name */
+    text-align: center; /* Ensure text (company name) is centered below the logo */
+}
+
+.logo-container .logo {
+    width: 60px; /* Square container width */
+    height: 60px; /* Square container height */
+    object-fit: cover; /* Ensure the logo fits within the container */
+    border: 2px solid #ccc; /* Optional: Border around the container */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow for visual effect */
+}
+
+
+
+
